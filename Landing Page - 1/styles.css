@@ -96,3 +96,9 @@ a{
 header, .footer {
     background-color: #eeb9b9;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
