@@ -15,21 +15,21 @@
       </nav>
     </header>
     </div>
-    <div class="content">
+    <div class="contact">
         <h1> Contact Us </h1>
       <form id="form" action="https://www.freecodecamp.com/email-submit">
         <div class="contact-form">
-          <label for="name"> Full Name <input id="name" placeholder="John Doe" /> </label>
-          <label for="email"> E-mail <input id="email" type="email" placeholder="john.doe@sample.com" name="email" /></label>
-          <label for="message" class="center-label"> Message <textarea id="message" class="textbox" rows="4" col="30"> </textarea> </label>
-          <button type="submit" value="Submit" id="submit"> Submit </button>
+          <label for="name" class="required"> Full Name: <input id="name" placeholder="John Doe" required/> </label>
+          <label for="email" class="required"> Email: <input id="email" type="email" placeholder="john.doe@sample.com" name="email" required/></label>
+          <label for="message" class="center-label"> Message <textarea id="message" class="textbox" rows="5" col="4" required> </textarea> </label>
+          <button type="submit" value="Submit" id="submit" href=""> Submit </button>
         </div>
       </form>
     </div>
  <div class="map-container">
   <iframe
     src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE_HERE"
-    width="400"
+    width= "1000"
     height="300"
     style="border:0;"
     allowfullscreen=""
