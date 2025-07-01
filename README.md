@@ -1,6 +1,7 @@
 This will serve as a template of a Website landing page to then be eddited and expanded apon to meet comapny needs
 
 -- Add screen shots of current process with date refrence below -- 
+![alt text](image.png)
 
 Header image - Replace with company logo 
 Name - Replace 
