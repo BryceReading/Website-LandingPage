@@ -1,7 +1,10 @@
 This will serve as a template of a Website landing page to then be eddited and expanded apon to meet comapny needs
 
--- Add screen shots of current process with date refrence below -- 
-![alt text](image.png)
+-- 01/07/25 -- 
+![Landing-Page as of 01/07/25](image-1.png)
+![About-Page as of 01/07/25](image-2.png)
+![Contact-Page as of 01/07/25](image-3.png)
+
 
 Header image - Replace with company logo 
 Name - Replace 
