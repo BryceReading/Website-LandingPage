@@ -1,17 +1,144 @@
+/* Universal styles */
 body {
   padding-top: 70px;
-  background-color: white;
+  background: white;
   color: black;
 }
 
-.dark-mode {
+/* Header Styles */
+.header-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  padding: 1px 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  background-color: #696565;
+}
+
+#header-img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-right: 20px;
+}
+
+.header-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 3%;
+  justify-content: space-between;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.text{
+  font-family: "Times New Roman", sans-serif;
+}
+
+.text-start::first-letter {
+  font-size: 36px; 
+  font-weight: bold;
+  color: rgb(72, 70, 70);
+}
+
+
+/* Footer Style */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #696565;
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 1px;
+}
+
+/* Contact Form Styles */
+#submit{
+  background-color: #ffffff;
+  width: 100px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+#submit:hover {
+  background-color: #a4a3a3;
+}
+
+.required::before {
+  content: '* ';
+  color: rgb(251, 5, 5);
+}
+
+.contact, .textbox {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.contact{
+  box-shadow: 10px 10px 20px rgb(0, 0, 0);
+}
+
+.textbox {
+  width: 85%;
+  text-align: left;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.center-label {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 10px;
+}
+
+/* Dark Mode Styles */
+
+body.dark-mode{
+  background: #222;
+  color: #fff;
+}
+
+body.dark-mode .nav-link {
+  color: #fff;
+}
+
+.switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
 
-.dark-mode input {
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -61,68 +188,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.header-bar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1000; 
-  padding: 1px 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-
-}
-
-#header-img {
-  width: 150px;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  margin-right: 20px;
-}
-
-.header-content{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 3%;
-  justify-content: space-between;
-}
-
-.nav-link {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-a{
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.text{
-  font-family: "Times New Roman", sans-serif;
-}
-
-.text-start::first-letter {
-  font-size: 36px; 
-  font-weight: bold;
-  color: rgb(72, 70, 70);
-}
-
-.contact-form{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-
+/* Responsive Styles */
 @media only screen and (max-width: 200px) {
   .header-bar {
     flex-direction: column;
@@ -138,61 +204,3 @@ a{
     width: 100%; 
   }
 }
-
-.center-label {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-bottom: 10px;
-}
-
-header, .footer {
-    background-color: #696565;
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.social-media {
-    text-align: center;
-    margin-top: 1px;
-}
-
-#submit{
-    background-color: #ffffff;
-    width: 100px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    margin-left: 20px;
-}
-
-#submit:hover {
-    background-color: #a4a3a3;
-}
-
-.required::before {
-    content: '* ';
-    color: rgb(251, 5, 5);
-}
-
-.contact, .textbox {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  flex-direction: column;
-}
-
-.contact{
-  box-shadow: 10px 10px 20px rgb(0, 0, 0);
-}
-
-.textbox {
-  width: 85%;
-  text-align: left;
-}
-
