@@ -1,8 +1,19 @@
 /* Universal styles */
+:root
+{
+  --primary-color: #696565;
+  --secondary-color: #ffffff;
+  --text-color: black;
+  --link-color: #2196F3;
+  --hover-color: #19cdb2;
+  --darkmode-bg: #222;
+  --darkmode-text: #fff;
+}
+
 body {
   padding-top: 70px;
-  background: white;
-  color: black;
+  background: var(--secondary-color);
+  color: var(--text-color);
 }
 
 /* Header Styles */
@@ -14,7 +25,7 @@ body {
   z-index: 1000; 
   padding: 1px 1px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  background-color: #696565;
+  background-color: var(--primary-color);
 }
 
 #header-img {
@@ -54,9 +65,8 @@ nav {
 .text-start::first-letter {
   font-size: 36px; 
   font-weight: bold;
-  color: rgb(72, 70, 70);
+  color: rgb(232, 116, 116);
 }
-
 
 /* Footer Style */
 .footer {
@@ -65,7 +75,7 @@ nav {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #696565;
+  background-color: var(--primary-color);
 }
 
 .social-media {
@@ -80,10 +90,11 @@ nav {
   cursor: pointer;
   margin-bottom: 10px;
   margin-left: 20px;
+  border-radius: 34px;
 }
 
 #submit:hover {
-  background-color: #a4a3a3;
+  background-color: var(--hover-color);
 }
 
 .required::before {
@@ -110,7 +121,7 @@ nav {
 .contact-form{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .center-label {
@@ -120,15 +131,18 @@ nav {
   margin-bottom: 10px;
 }
 
+.map-container{
+  display: flex;
+  justify-content: center;
+}
 /* Dark Mode Styles */
-
 body.dark-mode{
-  background: #222;
-  color: #fff;
+  background: var(--darkmode-bg);
+  color: var(--darkmode-text);
 }
 
 body.dark-mode .nav-link {
-  color: #fff;
+  color: var(--darkmode-text);
 }
 
 .switch {
@@ -151,7 +165,7 @@ body.dark-mode .nav-link {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: white;
   transition: .4s;
 }
 
@@ -162,16 +176,16 @@ body.dark-mode .nav-link {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: rgb(203, 196, 196);
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #000000;
 }
 
 input:focus + .slider{
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2195f332;
 } 
 
 input:checked + .slider:before {
@@ -203,4 +217,9 @@ input:checked + .slider:before {
   #header-img {
     width: 100%; 
   }
+}
+
+/* Main Page */
+#feature {
+ 
 }
