@@ -1,8 +1,8 @@
 /* Universal styles */
 :root
 {
-  --primary-color: #696565;
-  --secondary-color: #ffffff;
+  --primary-color: #696565; /*Header colour*/
+  --secondary-color: #ffffff; /*Background colour*/
   --text-color: black;
   --link-color: #2196F3;
   --hover-color: #19cdb2;
@@ -145,11 +145,13 @@ body.dark-mode .nav-link {
   color: var(--darkmode-text);
 }
 
+/* Dark Mode Switch */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 40px;
+  height: 14px;
+  top : 5px;
 }
 
 .switch input {
@@ -172,12 +174,12 @@ body.dark-mode .nav-link {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 10px;
+  width: 10px;
+  left: 2px;
+  bottom: 1.5px;
   background-color: rgb(203, 196, 196);
-  transition: .4s;
+  transition: .1s;
 }
 
 input:checked + .slider {
