@@ -10,14 +10,21 @@
   --darkmode-text: #fff;
 }
 
+body{ 
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  padding: 0;
+}
+
 body, html {
-  height : 100%;
+  height : auto; 
   margin: 0;
   display: flex;
   flex-direction: column;
-  padding-top: 70px;
   background: var(--secondary-color);
-  color: var(--text-color);
+  color: var(--text-color); 
 }
 
 main{
@@ -160,6 +167,10 @@ body.dark-mode .nav-link {
   color: var(--darkmode-text);
 }
 
+body.dark-mode .contact {
+  box-shadow: 10px 10px 20px white;
+}
+
 /* Dark Mode Switch */
 .switch {
   position: relative;
@@ -237,13 +248,7 @@ input:checked + .slider:before {
 }
 
 /* Main Page */
-.box{
-  width: 100vw;
-  height: 600px;
-  margin-left: calc(-50vw + 50%);
-  /*background: rgb(245, 245, 244);*/
-}
-
 #feature {
+  margin-top: 42px;
   margin-left: 15px;
 }
