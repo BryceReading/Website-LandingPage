@@ -2,11 +2,11 @@
 :root
 {
   --primary-color: #696565; /*Header colour*/
-  --secondary-color: #ffffff; /*Background colour*/
+  --secondary-color: radial-gradient(circle at top right, #bd29ff, #beff00); /*Background colour*/
   --text-color: black;
   --link-color: #2196F3;
   --hover-color: #19cdb2;
-  --darkmode-bg: #222;
+  --darkmode-bg: radial-gradient(circle at top right, #42D600, #4100FF);
   --darkmode-text: #fff;
 }
 
@@ -97,7 +97,7 @@ nav {
 }
 
 #copy-right {
-  color: var(--secondary-color);
+  color: #FFFAFA;
   font-size: 14px;
 }
 
@@ -131,6 +131,11 @@ nav {
 .contact{
   margin-top: 30px;
   box-shadow: 10px 10px 20px rgb(0, 0, 0);
+  background: transparent;
+  backdrop-filter: blur(40px);
+  border-radius: 8px;
+  width: 600px;
+  border: none;
 }
 
 .textbox {
@@ -252,4 +257,18 @@ input:checked + .slider:before {
 #feature {
   margin-top: 42px;
   margin-left: 15px;
+}
+
+#main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.box{
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
 }
