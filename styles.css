@@ -2,7 +2,7 @@
 :root
 {
   --primary-color: #696565; /*Header colour*/
-  --secondary-color: radial-gradient(circle at top right, #bd29ff, #beff00); /*Background colour*/
+  --secondary-color: radial-gradient(circle at top right, rgba(189, 41, 255, 0.5), rgba(190, 255, 0, 0.5)); /*Background colour*/
   --text-color: black;
   --link-color: #2196F3;
   --hover-color: #19cdb2;
@@ -260,7 +260,7 @@ input:checked + .slider:before {
 }
 
 #main-img {
-  width: 100%;
+  width: 100dvh;
   height: auto;
   display: block;
   max-width: 100%;
@@ -269,6 +269,64 @@ input:checked + .slider:before {
 
 .box{
   width: 100%;
-  max-width: 1800px;
+  max-width: 2000px;
   margin: 0 auto;
+}
+
+/* Carousel Styles */
+#carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: transparent;
+  backdrop-filter: blur(40px);
+}
+
+.carousel-container{
+  width: 600px;
+  overflow: hidden;
+  border: 5px solid transparent; 
+  border-radius: 20px;
+  background: transparent;
+  backdrop-filter: blur(40px);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wrap{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 250px;
+  justify-items: stretch;
+  animation: slide 10s infinite linear;
+  animation-play-state: running;
+}
+
+.wrap img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrap img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.8), 0 4px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.8); 
+}
+
+.wrap:hover{
+  animation-play-state: paused; 
+}
+
+@keyframes slide {
+  to {
+    translate: calc(-3 * 250px);
+  }
 }
