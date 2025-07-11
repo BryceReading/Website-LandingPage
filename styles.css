@@ -327,6 +327,6 @@ input:checked + .slider:before {
 
 @keyframes slide {
   to {
-    translate: calc(-3 * 250px);
+    translate: calc(-3 * 200px);
   }
 }
